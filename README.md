@@ -1,5 +1,5 @@
 <h1 align="center">
-<img src="https://texturepig.com/assets/img/output.png" width="256" margin-top="10px"/><br />
+<img src="https://texturepig.com/assets/img/icons/output500.png" width="256" margin-top="10px"/><br />
 
 **TexturePig**
 
