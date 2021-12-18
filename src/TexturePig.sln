@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFUI", "WPFUI\WPFUI.csproj", "{1ADC87D1-8963-4100-845A-18477824718E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TexturePig", "TexturePig\TexturePig.csproj", "{ABB50F6F-32FB-4F60-B990-BECAB66BB544}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1ADC87D1-8963-4100-845A-18477824718E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ADC87D1-8963-4100-845A-18477824718E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ADC87D1-8963-4100-845A-18477824718E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ADC87D1-8963-4100-845A-18477824718E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABB50F6F-32FB-4F60-B990-BECAB66BB544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABB50F6F-32FB-4F60-B990-BECAB66BB544}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABB50F6F-32FB-4F60-B990-BECAB66BB544}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABB50F6F-32FB-4F60-B990-BECAB66BB544}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9FB72BA7-613B-4723-A336-7B2AC2B6467B}
+	EndGlobalSection
+EndGlobal
