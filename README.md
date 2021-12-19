@@ -16,7 +16,7 @@
 <h1 align="center">
 
 
-![image](https://raw.githubusercontent.com/AZProductions/TexturePig/main/src/Assets/design/Web%201280%20%E2%80%93%201.png)
+![image](https://user-images.githubusercontent.com/66299945/146679885-af4cd699-d08b-422f-b41b-2bda6243bcad.png)
 
 
 </div>
