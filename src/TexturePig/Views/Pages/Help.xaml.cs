@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace TexturePig.Views.Pages
 {
     /// <summary>
-    /// Interaction logic for Forms.xaml
+    /// Interaction logic for Help.xaml
     /// </summary>
-    public partial class Forms : Page
+    public partial class Help : Page
     {
-        public Forms()
+        public Help()
         {
             InitializeComponent();
         }
