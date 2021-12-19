@@ -1,0 +1,6 @@
+GET http://localhost:8080/create/234
+content-type: application/json
+
+    {
+        "logo": "🔥"
+    }
