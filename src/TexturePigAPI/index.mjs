@@ -1,7 +1,7 @@
 import express from 'express';
 import { createClient } from '@supabase/supabase-js'
 const supabaseUrl = 'https://vneidrffkiqxdxwpwrzk.supabase.co'
-const supabaseKey = 'api-key';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoic2VydmljZV9yb2xlIiwiaWF0IjoxNjM5OTA4OTU1LCJleHAiOjE5NTU0ODQ5NTV9.G45qH-0YOQgNt0ZmIgvjyC5Ue2HL6CFlgul_BYRo0fI';
 const supabase = createClient(supabaseUrl, supabaseKey)
 const app = express();
 const PORT = 8080;

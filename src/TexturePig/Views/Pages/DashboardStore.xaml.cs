@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TexturePig
+namespace TexturePig.Views.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for DashboardStore.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class DashboardStore : Page
     {
-        public MainWindow()
+        public DashboardStore()
         {
             InitializeComponent();
         }

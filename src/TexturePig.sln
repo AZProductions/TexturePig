@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFUI", "WPFUI\WPFUI.csproj", "{1ADC87D1-8963-4100-845A-18477824718E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TexturePig", "TexturePig\TexturePig.csproj", "{ABB50F6F-32FB-4F60-B990-BECAB66BB544}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TexturePig", "TexturePig\TexturePig.csproj", "{5FA546B8-4B59-40A3-B4E6-FC11F300F388}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{1ADC87D1-8963-4100-845A-18477824718E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1ADC87D1-8963-4100-845A-18477824718E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1ADC87D1-8963-4100-845A-18477824718E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ABB50F6F-32FB-4F60-B990-BECAB66BB544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ABB50F6F-32FB-4F60-B990-BECAB66BB544}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ABB50F6F-32FB-4F60-B990-BECAB66BB544}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ABB50F6F-32FB-4F60-B990-BECAB66BB544}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FA546B8-4B59-40A3-B4E6-FC11F300F388}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FA546B8-4B59-40A3-B4E6-FC11F300F388}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FA546B8-4B59-40A3-B4E6-FC11F300F388}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FA546B8-4B59-40A3-B4E6-FC11F300F388}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
