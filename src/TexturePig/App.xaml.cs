@@ -18,7 +18,7 @@ namespace TexturePig
         protected override void OnStartup(StartupEventArgs e)
         {
             WPFUI.Theme.Manager.SetSystemTheme();
-            //Theme.Manager.SetSystemAccent();
+            //WPFUI.Theme.Manager.SetSystemAccent();
         }
     }
 }

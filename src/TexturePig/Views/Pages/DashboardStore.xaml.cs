@@ -24,5 +24,25 @@ namespace TexturePig.Views.Pages
         {
             InitializeComponent();
         }
+        bool trigger = false;
+        private void Border_MouseEnter(object sender, MouseEventArgs e)
+        {
+            trigger = false;
+            border.Background = Application.Current.Resources["ControlElevationBorderBrush"] as SolidColorBrush;
+        }
+
+        private void Border_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if (!trigger)
+            {
+                trigger = true;
+                border.Background = Application.Current.Resources["ControlFillColorDefaultBrush"] as SolidColorBrush;
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

@@ -6,6 +6,9 @@
     xmlns:local="clr-namespace:TexturePig.Views.Windows"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:wpfui="clr-namespace:WPFUI.Controls;assembly=WPFUI"
+    ScrollViewer.VerticalScrollBarVisibility="Visible"
+    ScrollViewer.CanContentScroll="True"
+    ScrollViewer.PanningMode="VerticalOnly"
     Title="TexturePig"
     Style="{StaticResource UiWindow}"
     WindowStartupLocation="CenterScreen"
@@ -16,7 +19,6 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-
         <Grid Grid.Row="0" Margin="12,16,12,16">
             <StackPanel
                 HorizontalAlignment="Left"
@@ -28,8 +30,22 @@
                     VerticalAlignment="Center"
                     RenderOptions.BitmapScalingMode="HighQuality"
                     Source="../../Assets/mwpf_icon.png" />
-                <TextBlock VerticalAlignment="Center" Text="TexturePig - Minecraft Texturepacks" />
+                <TextBlock VerticalAlignment="Center" Text="TexturePig" />
             </StackPanel>
+            <TextBox Width="500" IsEnabled="False" Text="       Search for packs and more..." TextAlignment="Justify">
+                <TextBox.Background>
+                    <ImageBrush ImageSource="/Assets/search_icon.png" Stretch="Uniform" AlignmentX="Left">
+                        <ImageBrush.Transform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform X="5"/>
+                            </TransformGroup>
+                        </ImageBrush.Transform>
+                    </ImageBrush>
+                </TextBox.Background>
+            </TextBox>
         </Grid>
 
         <Grid Grid.Row="1" Margin="0">
@@ -54,7 +70,6 @@
                 <Frame x:Name="RootFrame" />
             </Border>
         </Grid>
-
         <wpfui:TitleBar Grid.Row="0" />
     </Grid>
 </Window>

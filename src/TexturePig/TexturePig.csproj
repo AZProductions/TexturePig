@@ -26,6 +26,8 @@
     <None Remove="Assets\mwpf_icon.png" />
     <None Remove="Assets\mwpf_icon_full.png" />
     <None Remove="Assets\pc.ico" />
+    <None Remove="Assets\pig_header.png" />
+    <None Remove="Assets\search_icon.png" />
     <None Remove="Assets\settings.ico" />
     <None Remove="Assets\store.png" />
     <None Remove="Assets\switch.ico" />
@@ -36,11 +38,14 @@
     <None Remove="Assets\user.ico" />
     <None Remove="Assets\videos.ico" />
     <None Remove="Assets\warning.ico" />
+	<None Remove="Assets\pig_header.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Assets\mwpf_icon.png" />
     <Resource Include="Assets\mwpf_icon_full.png" />
+    <Resource Include="Assets\pig_header.png" />
+    <Resource Include="Assets\search_icon.png" />
     <Resource Include="Assets\the_witcher_wallpaper.jpg" />
   </ItemGroup>
 </Project>

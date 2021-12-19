@@ -18,11 +18,21 @@ namespace TexturePig.Views.Pages
     /// <summary>
     /// Interaction logic for Help.xaml
     /// </summary>
-    public partial class Help : Page
+    public partial class Settings : Page
     {
-        public Help()
+        public Settings()
         {
             InitializeComponent();
+        }
+
+        private void comboTheme_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBoxItem comboBoxItem = (ComboBoxItem)comboTheme.SelectedItem;
+            string value = comboBoxItem.Content.ToString();
+            if (value == "Light") 
+                WPFUI.Theme.Manager.Switch(WPFUI.Theme.Style.Light);
+            else
+                WPFUI.Theme.Manager.Switch(WPFUI.Theme.Style.Dark);
         }
     }
 }
