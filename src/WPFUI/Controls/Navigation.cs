@@ -242,7 +242,7 @@ namespace WPFUI.Controls
             }
 
 #if DEBUG
-            System.Diagnostics.Debug.WriteLine("Navigation loaded");
+            System.Diagnostics.Debug.WriteLine("(WPFUI) Navigation loaded");
 #endif
 
             Frame.NavigationUIVisibility = NavigationUIVisibility.Hidden;
