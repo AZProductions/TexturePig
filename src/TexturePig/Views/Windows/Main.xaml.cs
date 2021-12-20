@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Reflection;
+using System.Threading;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -86,14 +87,41 @@ namespace TexturePig.Views.Windows
         {
             if (e.Delta > 0)
                 IndexPos--;
-
             else if (e.Delta < 0)
                 IndexPos++;
+
             if(IndexPos == -1)
                 IndexPos = 4;
             if (IndexPos == 5)
                 IndexPos = 0;
             ChangeIndex(IndexPos);
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.Key)
+            {
+                case Key.D1 when (Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control:
+                    RootNavigation.Navigate("dashboard");
+                    Debug.WriteLine("(KEYEVNT) Switched page index to 'dashboard'");
+                    break;
+                case Key.D2 when (Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control:
+                    RootNavigation.Navigate("featured");
+                    Debug.WriteLine("(KEYEVNT) Switched page index to 'featured'");
+                    break;
+                case Key.D3 when (Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control:
+                    RootNavigation.Navigate("account");
+                    Debug.WriteLine("(KEYEVNT) Switched page index to 'account'");
+                    break;
+                case Key.D4 when (Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control:
+                    RootNavigation.Navigate("library");
+                    Debug.WriteLine("(KEYEVNT) Switched page index to 'library'");
+                    break;
+                case Key.D5 when (Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control:
+                    RootNavigation.Navigate("settings");
+                    Debug.WriteLine("(KEYEVNT) Switched page index to 'settings'");
+                    break;
+            }
         }
     }
 }

@@ -42,6 +42,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Assets\mwpf_icon.png" />
     <Resource Include="Assets\mwpf_icon_full.png" />
     <Resource Include="Assets\pig_header.png" />

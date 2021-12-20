@@ -12,7 +12,8 @@
     Title="TexturePig"
     Style="{StaticResource UiWindow}"
     WindowStartupLocation="CenterScreen"
-    Topmost="True"
+    KeyDown="Window_KeyDown"
+    Topmost="False"
     mc:Ignorable="d">
     <Grid>
         <Grid.RowDefinitions>
