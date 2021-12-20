@@ -11,7 +11,23 @@
 
     <Grid>
         <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="SemiBold" FontSize="30" Margin="00,0,0,20">We are working on it!</Label>
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Normal" FontSize="20" Margin="00,35,0,0">Go to
-            <Hyperlink x:Name="hyper" Click="hyper_Click">Settings</Hyperlink> and check for updates.</TextBlock>
+        <TextBlock Foreground="White" HorizontalAlignment="Center" TextAlignment="Justify" TextTrimming="WordEllipsis" VerticalAlignment="Center" FontWeight="Normal" FontSize="20" Height="50" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="9"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>Go to
+            <wpfui:Hyperlink x:Name="hyper" Click="hyper_Click" FontSize="20" Margin="0,12,0,0" RenderTransformOrigin="0.5,0.5" >
+                <wpfui:Hyperlink.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="9"/>
+                    </TransformGroup>
+                </wpfui:Hyperlink.RenderTransform>Settings</wpfui:Hyperlink> and check for updates.</TextBlock>
     </Grid>
 </Page>

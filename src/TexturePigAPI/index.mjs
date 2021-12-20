@@ -42,6 +42,7 @@ app.get(VERSION+'/pack/:id', (req, res) =>
     }
 
     let { data, error } = supabase.from('pack').select('*').order('id', true).eq('id', id).then(data => { res.status(200).send(data.body) }).catch(console.log);
+    console.log(`Sent pack request: ${data}`);
 });
 
 app.listen(

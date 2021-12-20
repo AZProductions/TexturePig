@@ -54,7 +54,8 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <wpfui:NavigationStore
+            <wpfui:NavigationStore PreviewMouseWheel="RootNavigation_PreviewMouseWheel"
+                x:FieldModifier="public"
                 x:Name="RootNavigation"
                 Grid.Column="0"
                 Margin="6,0,6,0"

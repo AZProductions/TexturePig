@@ -29,7 +29,14 @@ namespace TexturePig.Views.Pages
 
         private void hyper_Click(object sender, RoutedEventArgs e)
         {
-            //Windows.MainValue.Store.Navigate("settings");
+            //Windows.Main.Store.
+            foreach (Window window in Application.Current.Windows)
+            {
+                if (window.GetType() == typeof(Windows.Main))
+                {
+                    (window as Windows.Main).RootNavigation.Navigate("settings");
+                }
+            }
         }
     }
 }
