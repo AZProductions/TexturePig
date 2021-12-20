@@ -48,11 +48,12 @@
                         FontSize="18"
                         Opacity=".8"
                         Text="Download Minecraft Texturepacks in a matter of seconds." />
-                    <wpfui:Button
+                    <Button
                         Height="36"
                         Margin="0,6,0,0"
                         HorizontalAlignment="Left"
                         Background="#4F000000"
+                        IsEnabled="True"
                         Click="Button_Click"
                         Content="Get Started" />
                 </StackPanel>
@@ -85,7 +86,7 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Border x:Name="border" MouseEnter="Border_MouseEnter" MouseLeave="Border_MouseLeave" Background="{DynamicResource ControlFillColorDefaultBrush}" Margin="0,0,10,0" CornerRadius="8">
+                <Border x:Name="border" MouseDown="Button_Click" Background="{DynamicResource ControlFillColorDefaultBrush}" Margin="0,0,10,0" CornerRadius="8">
                     <StackPanel Margin="8">
                         <Image
                             Margin="14"

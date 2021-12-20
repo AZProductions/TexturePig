@@ -70,6 +70,6 @@
                 <Frame x:Name="RootFrame" />
             </Border>
         </Grid>
-        <wpfui:TitleBar Grid.Row="0" />
+        <wpfui:TitleBar Grid.Row="0"/>
     </Grid>
 </Window>

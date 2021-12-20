@@ -8,6 +8,10 @@ using WPFUI.Common;
 
 namespace TexturePig.Views.Windows
 {
+    public static class MainValue
+    {
+        public static NavigationStore Store;
+    }
     /// <summary>
     /// Interaction logic for Bubble.xaml
     /// </summary>
@@ -24,8 +28,9 @@ namespace TexturePig.Views.Windows
             
             RenderOptions.ProcessRenderMode = System.Windows.Interop.RenderMode.Default;
             //DisableWpfTabletSupport();
-            
+            MainValue.Store = RootNavigation;
             InitializeComponent();
+            
             NavigationItems = new ObservableCollection<NavItem>
             {
                 new() { Icon = WPFUI.Common.Icon.Home20, Name = "Home", Tag = "dashboard", Type = typeof(Pages.DashboardStore)},
@@ -34,9 +39,9 @@ namespace TexturePig.Views.Windows
 
             NavigationFooter = new ObservableCollection<NavItem>
             {
-                new() { Icon = WPFUI.Common.Icon.PersonAccounts24, Name = "Account", Tag = "account", Type = typeof(Pages.DashboardStore)},
+                new() { Icon = WPFUI.Common.Icon.PersonAccounts24, Name = "Account", Tag = "account", Type = typeof(Pages.NotSupported)},
                 new() { Icon = WPFUI.Common.Icon.Library20, Name = "Library", Tag = "library", Type = typeof(Pages.DashboardStore)},
-                new() { Icon = WPFUI.Common.Icon.Settings24, Name = "Settings", Tag = "help", Type = typeof(Pages.Settings)}
+                new() { Icon = WPFUI.Common.Icon.Settings24, Name = "Settings", Tag = "settings", Type = typeof(Pages.Settings)}
             };
 
             DataContext = this;

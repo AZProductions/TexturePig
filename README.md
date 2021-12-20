@@ -25,3 +25,4 @@
 </div>
 
 ## About
+TexturePig is a state-of-the-art Minecraft TexturePack CDN and store delivery service. It uses a carbon neutral infrastructure and delivers download speeds up to 100GiB of bandwidth per server (We have a lot of these). Users can submit their packs for free by creating an account. We want to also partner with famous Youtubers and release collections of their packs or packs that they use (Reach us on yt-tp@team.azsoftware.eu.org). We love the Minecraft community and want to help users expand their range of texture packs in a safe way without the need to dodge 20 ads on some not safe site. TexturePig is made my the community for the community.

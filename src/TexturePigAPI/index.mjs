@@ -8,11 +8,6 @@ const PORT = 8080;
 const VERSION = "/v1";
 app.use( express.json() )
 
-// supabase.from('pack')
-//   .select('*')
-//   .limit(5)
-//   .then(console.log)
-
 // app.get(VERSION+'/pack', (req, res) => 
 // {
 //     res.status(200).send({
@@ -21,6 +16,23 @@ app.use( express.json() )
 //     })
 // });
 
+app.get(VERSION+'/create/:id', (req, res) => 
+{
+    const { id } = req.params;
+    const { body } = req.body;
+    const { name } = req.body;
+    if (!body)
+    {
+        res.status(420).send({ message: 'INVALID ARGUMENTS'})
+    }
+    //var today = new Date();
+
+    //let { data, error } = supabase
+        //.from('pack')
+        //.insert(`{ id: ${id}, created_at: '${today.toISOString()}', name: ${name }, version:'1.12.2', count: 10, download: 'https://example.com/test.zip' }`)
+        //.then(data => { res.status(200).send(data) }).catch(console.log);
+});
+
 app.get(VERSION+'/pack/:id', (req, res) => 
 {
     const { id } = req.params;
@@ -28,13 +40,8 @@ app.get(VERSION+'/pack/:id', (req, res) =>
     {
         res.status(420).send({ message: 'INVALID ARGUMENTS'})
     }
-    const { data, error } = supabase
-    .from('packs')
-    .select('*')
-    .eq('id', id).then(console.log);
-    res.send({
-        data: `${data}`
-    })
+
+    let { data, error } = supabase.from('pack').select('*').order('id', true).eq('id', id).then(data => { res.status(200).send(data.body) }).catch(console.log);
 });
 
 app.listen(
