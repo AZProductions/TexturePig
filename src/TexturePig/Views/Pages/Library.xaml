@@ -5,21 +5,18 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:wpfui="clr-namespace:WPFUI.Controls;assembly=WPFUI"
       xmlns:local="clr-namespace:TexturePig.Views.Pages"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      mc:Ignorable="d"
+      d:DesignHeight="650"
+      d:DesignWidth="800"
+      Loaded="Page_Loaded"
+      Style="{StaticResource UiPageScrollable}"
       Title="Library">
 
     <Grid>
-        <TextBlock Effect="{x:Null}"
-            Grid.Row="0"
-            Margin="16"
-            FontSize="20"
-            FontWeight="Bold"
-            Text="Library" />
-        <StackPanel>
-            <wpfui:NavigationFluent Background="Transparent" Margin="10,50, 0,0" BorderBrush="Transparent">
-                <wpfui:Snackbar Show="True" Title="hello" Content="hello"></wpfui:Snackbar>
-            </wpfui:NavigationFluent>
+        <TextBlock Effect="{x:Null}" Grid.Row="0" Margin="16" FontSize="20" FontWeight="Bold" Text="Library" Foreground="White"/>
+        <StackPanel x:Name="contentPanel" Grid.Row="1" Margin="5, 60">
+            
         </StackPanel>
+        <Image x:Name="Img" Height="64" Width="64" HorizontalAlignment="Right" VerticalAlignment="Top"></Image>
     </Grid>
 </Page>

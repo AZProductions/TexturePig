@@ -9,6 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TexturePig", "TexturePig\Te
 EndProject
 Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "TexturePig.UWP", "TexturePig.UWP\TexturePig.UWP.wapproj", "{603D3477-E9C5-4694-80FB-4D165F023ED7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TexturePig.API", "TexturePig.API\TexturePig.API.csproj", "{3CE774F6-9930-4C2E-84D9-C3C9C2BE178C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E8599E4B-06B4-4127-BF60-F23AD39772AF}"
+	ProjectSection(SolutionItems) = preProject
+		APIendpoints.txt = APIendpoints.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +100,26 @@ Global
 		{603D3477-E9C5-4694-80FB-4D165F023ED7}.Release|x86.ActiveCfg = Release|x86
 		{603D3477-E9C5-4694-80FB-4D165F023ED7}.Release|x86.Build.0 = Release|x86
 		{603D3477-E9C5-4694-80FB-4D165F023ED7}.Release|x86.Deploy.0 = Release|x86
+		{3CE774F6-9930-4C2E-84D9-C3C9C2BE178C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CE774F6-9930-4C2E-84D9-C3C9C2BE178C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CE774F6-9930-4C2E-84D9-C3C9C2BE178C}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{3CE774F6-9930-4C2E-84D9-C3C9C2BE178C}.Debug|ARM.Build.0 = Debug|Any CPU
+		{3CE774F6-9930-4C2E-84D9-C3C9C2BE178C}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{3CE774F6-9930-4C2E-84D9-C3C9C2BE178C}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{3CE774F6-9930-4C2E-84D9-C3C9C2BE178C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3CE774F6-9930-4C2E-84D9-C3C9C2BE178C}.Debug|x64.Build.0 = Debug|Any CPU
+		{3CE774F6-9930-4C2E-84D9-C3C9C2BE178C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3CE774F6-9930-4C2E-84D9-C3C9C2BE178C}.Debug|x86.Build.0 = Debug|Any CPU
+		{3CE774F6-9930-4C2E-84D9-C3C9C2BE178C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CE774F6-9930-4C2E-84D9-C3C9C2BE178C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CE774F6-9930-4C2E-84D9-C3C9C2BE178C}.Release|ARM.ActiveCfg = Release|Any CPU
+		{3CE774F6-9930-4C2E-84D9-C3C9C2BE178C}.Release|ARM.Build.0 = Release|Any CPU
+		{3CE774F6-9930-4C2E-84D9-C3C9C2BE178C}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{3CE774F6-9930-4C2E-84D9-C3C9C2BE178C}.Release|ARM64.Build.0 = Release|Any CPU
+		{3CE774F6-9930-4C2E-84D9-C3C9C2BE178C}.Release|x64.ActiveCfg = Release|Any CPU
+		{3CE774F6-9930-4C2E-84D9-C3C9C2BE178C}.Release|x64.Build.0 = Release|Any CPU
+		{3CE774F6-9930-4C2E-84D9-C3C9C2BE178C}.Release|x86.ActiveCfg = Release|Any CPU
+		{3CE774F6-9930-4C2E-84D9-C3C9C2BE178C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

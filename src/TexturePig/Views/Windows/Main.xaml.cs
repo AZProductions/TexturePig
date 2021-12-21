@@ -10,10 +10,6 @@ using WPFUI.Common;
 
 namespace TexturePig.Views.Windows
 {
-    public static class MainValue
-    {
-        public static NavigationStore Store;
-    }
     /// <summary>
     /// Interaction logic for Bubble.xaml
     /// </summary>
@@ -29,8 +25,9 @@ namespace TexturePig.Views.Windows
                 WPFUI.Background.Mica.Apply(this);
             
             RenderOptions.ProcessRenderMode = System.Windows.Interop.RenderMode.Default;
-            MainValue.Store = RootNavigation;
+            
             InitializeComponent();
+
             Debug.WriteLine("(ENVT) Triggerd InitializeComponent");
             
             NavigationItems = new ObservableCollection<NavItem>
@@ -85,15 +82,21 @@ namespace TexturePig.Views.Windows
 
         private void RootNavigation_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
         {
-            if (e.Delta > 0)
-                IndexPos--;
-            else if (e.Delta < 0)
-                IndexPos++;
+            switch (e.Delta)
+            {
+                case > 0:
+                    IndexPos--;
+                    break;
+                case < 0:
+                    IndexPos++;
+                    break;
+            }
 
-            if(IndexPos == -1)
+            if (IndexPos == -1)
                 IndexPos = 4;
             if (IndexPos == 5)
                 IndexPos = 0;
+
             ChangeIndex(IndexPos);
         }
 

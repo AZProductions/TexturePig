@@ -56,6 +56,7 @@
                         Background="#4F000000"
                         IsEnabled="True"
                         Click="Button_Click"
+                        Panel.ZIndex="-900"
                         Content="Get Started" />
                 </StackPanel>
             </Grid>
@@ -87,7 +88,35 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Border x:Name="border" MouseDown="Button_Click" Background="{DynamicResource ControlFillColorDefaultBrush}" Margin="0,0,10,0" CornerRadius="8">
+                <Border x:Name="border" Background="{DynamicResource ControlFillColorDefaultBrush}" Margin="10" CornerRadius="8">
+                    <StackPanel Margin="8">
+                        <Image
+                            Margin="14"
+                            VerticalAlignment="Center"
+                            RenderOptions.BitmapScalingMode="HighQuality"
+                            Source="../../Assets/mwpf_icon.png" />
+                        <TextBlock
+                            Grid.Row="0"
+                            FontSize="16"
+                            FontWeight="Bold"
+                            Text="Title" />
+                        <TextBlock
+                            Grid.Row="0"
+                            Margin="0,0,0,40"
+                            FontSize="12"
+                            Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                            Text="Java 1.8.9"/>
+
+                        <wpfui:Button Grid.Row="0"
+                                        Click="Button_Click"
+                                      FontSize="12"
+                            FontWeight="Bold">
+                            Get
+                        </wpfui:Button>
+                    </StackPanel>
+                </Border>
+
+                <Border Background="{DynamicResource ControlFillColorDefaultBrush}" CornerRadius="8" Grid.Column="1" Margin="10">
                     <StackPanel Margin="8">
                         <Image
                             Margin="14"
@@ -113,7 +142,7 @@
                     </StackPanel>
                 </Border>
 
-                <Border Background="{DynamicResource ControlFillColorDefaultBrush}" CornerRadius="8" Grid.Column="1" Margin="0,0,10,0">
+                <Border Background="{DynamicResource ControlFillColorDefaultBrush}" CornerRadius="8" Grid.Column="2" Margin="10">
                     <StackPanel Margin="8">
                         <Image
                             Margin="14"
@@ -139,7 +168,7 @@
                     </StackPanel>
                 </Border>
 
-                <Border Background="{DynamicResource ControlFillColorDefaultBrush}" CornerRadius="8" Grid.Column="2" Margin="0,0,10,0">
+                <Border Background="{DynamicResource ControlFillColorDefaultBrush}" CornerRadius="8" Grid.Column="3" Margin="10">
                     <StackPanel Margin="8">
                         <Image
                             Margin="14"
@@ -165,33 +194,7 @@
                     </StackPanel>
                 </Border>
 
-                <Border Background="{DynamicResource ControlFillColorDefaultBrush}" CornerRadius="8" Grid.Column="3" Margin="0,0,10,0">
-                    <StackPanel Margin="8">
-                        <Image
-                            Margin="14"
-                            VerticalAlignment="Center"
-                            RenderOptions.BitmapScalingMode="HighQuality"
-                            Source="../../Assets/mwpf_icon.png" />
-                        <TextBlock
-                            Grid.Row="0"
-                            FontSize="16"
-                            FontWeight="Bold"
-                            Text="WPF UI" />
-                        <TextBlock
-                            Grid.Row="0"
-                            Margin="0,0,0,40"
-                            FontSize="12"
-                            Foreground="{DynamicResource TextFillColorTertiaryBrush}"
-                            Text="Windows Library" />
-                        <TextBlock
-                            Grid.Row="0"
-                            FontSize="12"
-                            FontWeight="Bold"
-                            Text="Installed" />
-                    </StackPanel>
-                </Border>
-
-                <Border Background="{DynamicResource ControlFillColorDefaultBrush}" MouseDown="Button_Click" CornerRadius="8" Grid.Column="4" Margin="0,0,10,0">
+                <Border Background="{DynamicResource ControlFillColorDefaultBrush}" MouseDown="Button_Click" CornerRadius="8" Grid.Column="4" Margin="10">
                     <StackPanel Margin="8">
                         <Image
                             Margin="14"

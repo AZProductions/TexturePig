@@ -1,0 +1,4 @@
+/v1/pack/meta/:id
+/v1/pack/create/ -> body
+/v1/pack/remove/:id
+/v1/pack/update/:id -> body

@@ -44,12 +44,32 @@ namespace TexturePig.Views.Pages
             }
         }
 
+        bool active = false;
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            new MessageBox()
+            if (!active)
             {
-                Title = "hello"
-            }.Show(); ;
+                WPFUI.Controls.Button btn = (WPFUI.Controls.Button)sender;
+                btn.Content = new ProgressBar()
+                {
+                    Foreground = Brushes.White,
+                    Value = 10,
+                    Height = 10,
+                    MinWidth = 100,
+                    HorizontalAlignment = HorizontalAlignment.Center,
+                    VerticalAlignment = VerticalAlignment.Center
+                };
+                active = true;
+            }
+            else 
+            {
+                WPFUI.Controls.Button btn = (WPFUI.Controls.Button)sender;
+                ProgressBar progressBar = btn.Content as ProgressBar;
+                if (progressBar.Value == 100)
+                    progressBar.Value = 0;
+                else
+                    progressBar.Value = progressBar.Value + 10;
+            }
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)

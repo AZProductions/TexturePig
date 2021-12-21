@@ -72,6 +72,6 @@
                 <Frame x:Name="RootFrame" />
             </Border>
         </Grid>
-        <wpfui:TitleBar Grid.Row="0"/>
+        <wpfui:TitleBar Height="66" VerticalAlignment="Stretch"/>
     </Grid>
 </Window>
