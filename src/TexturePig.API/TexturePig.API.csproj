@@ -11,4 +11,8 @@
     <PackageReference Include="supabase-csharp" Version="0.2.9" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TexturePig.Verification\TexturePig.Verification.csproj" />
+  </ItemGroup>
+
 </Project>
