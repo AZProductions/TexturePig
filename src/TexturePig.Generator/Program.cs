@@ -15,7 +15,7 @@ public class Program
 
 		string Base = Directory.GetCurrentDirectory().Replace(@"\", "/").Replace("/src/TexturePig.Generator/bin/Debug/net6.0", string.Empty);
 		string Artifacts = Path.Combine(Base, "artifacts");
-		string OutputCDN = Path.Combine(Path.Combine(Base, "output"), "cdn");
+		string OutputCDN = Path.Combine(Base, "output").ToString() + "/cdn/";
 		string OutputStatic = Path.Combine(Base, "output").ToString()+ "/static/";
 
 		string[] AllArtifacts = Directory.GetFiles(Artifacts);
@@ -27,6 +27,7 @@ public class Program
 			Console.WriteLine($"\nAdding: {pack.Name}, ID: {pack.Id}");
 			File.WriteAllText(OutputStatic+"/pack/" + $"{pack.Name}.html", PackPage(pack));
 		}
+		File.WriteAllText(OutputCDN + $"index.html", RedirectPage("https://texturepig.com/"));
 	}
 
 	static string ConvertYamlToJson(string yaml) 
