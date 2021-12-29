@@ -27,7 +27,7 @@ public class Program
 			Console.WriteLine($"\nAdding: {pack.Name}, ID: {pack.Id}");
 			File.WriteAllText(OutputStatic+"/pack/" + $"{pack.Name}.html", PackPage(pack));
 		}
-		File.WriteAllText(OutputCDN + $"index.html", RedirectPage("https://texturepig.com/"));
+		File.WriteAllText(OutputCDN + $"index.html", RedirectPage("https://texturepig.com/", 0));
 	}
 
 	static string ConvertYamlToJson(string yaml) 
@@ -38,9 +38,9 @@ public class Program
 		return JsonConvert.SerializeObject(yamlObject);
 	}
 
-	static string RedirectPage(string URL) 
+	static string RedirectPage(string URL, int TIME = 1)
 	{
-		return $"<!DOCTYPE html><html><head><meta http-equiv=\"refresh\" content=\"0; URL = {URL}\" /></head><body><p>If you are not redirected in five seconds, <a href=\"{URL}\">click here</a>.</p></body></html>";
+		return $"<!DOCTYPE html><html><head><meta http-equiv=\"refresh\" content=\"{TIME}; URL = {URL}\" /></head><body><p>If you are not redirected in five seconds, <a href=\"{URL}\">click here</a>.</p></body></html>";
 	}
 
 	static string PackPage(Pack pack) 
