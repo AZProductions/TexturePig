@@ -1,0 +1,64 @@
+﻿@namespace TexturePig.Web
+@using Microsoft.AspNetCore.Components.Rendering
+@inherits LayoutComponentBase
+
+<AntDesign.ProLayout.BasicLayout 
+    Logo="@("https://texturepig.com/assets/img/icons/favicon.svg")"
+    MenuData="_menuData" IsMobile=false FixSiderbar=true>
+    <RightContentRender>
+        <TexturePig.Web.Components.RightContent />
+    </RightContentRender>   
+    <ChildContent>
+        @Body
+    </ChildContent>
+    <FooterRender>
+        <FooterView Copyright="2021 AZ Software" Links="Links"></FooterView>
+    </FooterRender>
+</AntDesign.ProLayout.BasicLayout>
+<SettingDrawer />
+
+@code
+{
+    private readonly MenuDataItem[] _menuData =
+    {
+        new MenuDataItem
+        {
+            Path = "/",
+            Name = "Home",
+            Key = "home",
+            Icon = "home",
+        },
+        new MenuDataItem
+        {
+            Path = "/account/settings",
+            Name = "Categories",
+            Key = "categories",
+            Icon = "appstore",
+        }
+    };
+
+    public LinkItem[] Links { get; set; } =
+    {
+        new LinkItem
+        {
+            Key = "TexturePig.Web",
+            Title = "TexturePig.Web",
+            Href = "https://TexturePig.com",
+            BlankTarget = true,
+        },
+        new LinkItem
+        {
+            Key = "github",
+            Title = (RenderFragment)(@<Icon Type="github" />),
+            Href = "https://github.com/TexturePig.Web",
+            BlankTarget = true,
+        },
+        new LinkItem
+        {
+            Key = "Blazor",
+            Title = "Blazor",
+            Href = "https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor?WT.mc_id=DT-MVP-5003987",
+            BlankTarget = true,
+        }
+    };
+}

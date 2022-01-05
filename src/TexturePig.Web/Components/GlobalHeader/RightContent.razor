@@ -1,0 +1,25 @@
+﻿@namespace TexturePig.Web.Components
+@inherits AntDomComponentBase
+@using AntDesign;
+@using AntDesign.ProLayout
+<Space Class="@ClassMapper.Class">
+    <SpaceItem>
+        <HeaderSearch Class="action search"
+                      Placeholder="Site Search"
+                      DefaultValue="example"/>
+    </SpaceItem>
+    <SpaceItem>
+        <AvatarDropdown Name="Example"   MenuItems="@AvatarMenuItems"
+                        Avatar="Test"/>
+    </SpaceItem>
+    @code
+    {
+     public AvatarMenuItem[] AvatarMenuItems { get; set; } = new AvatarMenuItem[]
+        {
+            new() { Key = "center", IconType = "user", Option = "Account"},
+            new() { Key = "setting", IconType = "setting", Option = "Settings"},
+            new() { IsDivider = true },
+            new() { Key = "logout", IconType = "logout", Option = "Log out"}
+        };
+    }
+</Space>

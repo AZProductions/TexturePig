@@ -1,0 +1,17 @@
+﻿@page "/plp"
+@inject NotificationService _notice
+ 
+<Button Type="@ButtonType.Primary" OnClick="@OnClick">
+    Open the notification box
+</Button>
+
+@code{
+    private async Task OnClick()
+    {
+        await _notice.Open(new NotificationConfig()
+        {
+            Message = "Migration",
+            Description = "We are migrating to a new infrastructure, expect temporary downtime and new features!"
+        });
+    }
+}
