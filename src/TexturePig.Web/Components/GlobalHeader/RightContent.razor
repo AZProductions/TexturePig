@@ -9,8 +9,24 @@
                       DefaultValue="example"/>
     </SpaceItem>
     <SpaceItem>
-        <AvatarDropdown Name="Example"   MenuItems="@AvatarMenuItems"
-                        Avatar="Test"/>
+        <span class="avatar-item">
+        <Badge Count="12">
+            <AvatarDropdown Name="Example"   MenuItems="@AvatarMenuItems" Avatar="Test">
+            
+            </AvatarDropdown>
+        </Badge>
+        </span>
+        <style>
+    /* tile uploaded pictures */
+    .avatar-item {
+        margin-left: 24px;
+    }
+
+    [class*='-col-rtl'] .avatar-item {
+        margin-right: 24px;
+        margin-left: 0;
+    }
+    </style>
     </SpaceItem>
     @code
     {
