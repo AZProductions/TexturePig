@@ -1,10 +1,19 @@
-﻿<Router AppAssembly="@typeof(Program).Assembly">
+﻿@using Microsoft.AspNetCore.Http.Extensions
+@inject NavigationManager NavigationManager
+<Router AppAssembly="@typeof(Program).Assembly">
     <Found Context="routeData">
         <RouteView RouteData="@routeData" DefaultLayout="@typeof(BasicLayout)" />
     </Found>
     <NotFound>
         <LayoutView Layout="@typeof(BasicLayout)">
-            <Result Status="404" Title="404" SubTitle="Sorry, the page you visited does not exist."><Extra><Button Type="primary">Back Home</Button></Extra></Result>
+            <Result Status="404" Title="404" SubTitle="Sorry, the page you visited does not exist."><Extra><Button @onclick="NavigateToCounterComponent"
+                Type="primary">Back Home</Button></Extra></Result>
+            @code { 
+                    private void NavigateToCounterComponent() 
+                    { 
+                        NavigationManager.NavigateTo("/");  
+                    } 
+                }   
         </LayoutView>
     </NotFound>
 </Router>
