@@ -1,0 +1,21 @@
+﻿<div>
+    <Card Hoverable Style="width: 240px" Cover="coverTemplate">
+        <CardMeta Title="@Title" Description="@Image"/>
+    </Card>
+</div>
+
+
+@code
+{
+    [Parameter]
+    public string Title { get; set; }
+    
+    [Parameter]
+    public string Description { get; set; }
+
+    [Parameter]
+    public static string Image { get; set; }
+
+    [Parameter]
+    public RenderFragment coverTemplate { get; set; } = @<img alt="pack image" src=@Image/>;
+}

@@ -1,0 +1,31 @@
+﻿@inject IJSRuntime JS
+
+@if (latency is null)
+{
+    <Alert Type="@AlertType.Info"
+       Message="Calculating..."
+       ShowIcon="true" />
+}
+else
+{
+        <Alert Type="@AlertType.Info"
+       ShowIcon="true" Closable>
+   @(latency.Value.TotalMilliseconds)ms Loading Speed.
+</Alert>
+}
+
+@code {
+    private DateTime startTime;
+    private TimeSpan? latency;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            startTime = DateTime.UtcNow;
+            var _ = await JS.InvokeAsync<string>("toString");
+            latency = DateTime.UtcNow - startTime;
+            StateHasChanged();
+        }
+    }
+}

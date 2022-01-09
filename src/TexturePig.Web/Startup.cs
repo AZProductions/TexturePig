@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using AntDesign.ProLayout;
 using Microsoft.AspNetCore.HttpOverrides;
+using System.Net;
 
 namespace TexturePig.Web
 {
@@ -26,22 +27,6 @@ namespace TexturePig.Web
 
         public void ConfigureServices(IServiceCollection services)
         {
-            /*services.Configure<ProSettings>(settings =>
-            {
-                settings.NavTheme = "realDark";
-                settings.HeaderHeight = 48;
-                settings.Layout = "mix";
-                settings.ContentWidth = "Fluid";
-                settings.FixedHeader = false;
-                settings.FixSiderbar = true;
-                settings.Title = "TexturePig.Web";
-                settings.PrimaryColor = "daybreak";
-                settings.ColorWeak = false;
-                settings.SplitMenus = false;
-                settings.HeaderRender = true;
-                settings.MenuRender = true;
-                settings.MenuHeaderRender = true;
-            });*/
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddAntDesign();
@@ -50,6 +35,10 @@ namespace TexturePig.Web
                 BaseAddress = new Uri(sp.GetService<NavigationManager>().BaseUri)
             });
             services.Configure<ProSettings>(Configuration.GetSection("ProSettings"));
+/*            services.Configure<ForwardedHeadersOptions>(options =>
+            {
+                options.KnownProxies.Add(IPAddress.Parse("0.0.0.0"));
+            });*/
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
