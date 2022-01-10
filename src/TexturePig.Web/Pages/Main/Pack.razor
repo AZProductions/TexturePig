@@ -1,0 +1,11 @@
+﻿@page "/pack/{value}"
+@page "/p/{value}"
+
+<PageTitle>@Value - TexturePig</PageTitle>
+
+<h1>@Value</h1>
+
+@code {
+    [Parameter]
+    public string? Value { get; set; }
+}

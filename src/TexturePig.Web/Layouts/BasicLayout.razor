@@ -44,7 +44,7 @@
         },        
         new MenuDataItem
         {
-            Path = "/account/collections",
+            Path = "/collections",
             Name = "Collections",
             Key = "collections",
             Icon = "folder",
@@ -55,23 +55,22 @@
     {
         new LinkItem
         {
-            Key = "TexturePig.Web",
-            Title = "TexturePig.Web",
-            Href = "https://TexturePig.com",
+            Key = "New",
+            Title = (RenderFragment)(@<Icon Type="file-add" />),
+            Href = "/new",
+            BlankTarget = false,
+        },
+        new LinkItem
+        {
+            Key = "Youtube",
+            Title = (RenderFragment)(@<Icon Type="youtube" />),
+            Href = "https://www.youtube.com/channel/UC1LDuTWObE6GubnrvWAVgOQ",
             BlankTarget = true,
         },
         new LinkItem
         {
-            Key = "github",
-            Title = (RenderFragment)(@<Icon Type="github" />),
-            Href = "https://github.com/TexturePig.Web",
-            BlankTarget = true,
-        },
-        new LinkItem
-        {
-            Key = "Blazor",
-            Title = "Blazor",
-            Href = "https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor?WT.mc_id=DT-MVP-5003987",
+            Title = "Support",
+            Href = "https://azsoftware.eu.org/support",
             BlankTarget = true,
         }
     };

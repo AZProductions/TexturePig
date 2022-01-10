@@ -2,16 +2,13 @@
 
 @if (latency is null)
 {
-    <Alert Type="@AlertType.Info"
-       Message="Calculating..."
-       ShowIcon="true" />
+      <Tag PresetColor="@PresetColor.Blue">Calculating...</Tag>
 }
 else
 {
-        <Alert Type="@AlertType.Info"
-       ShowIcon="true" Closable>
-   @(latency.Value.TotalMilliseconds)ms Loading Speed.
-</Alert>
+    <Tag PresetColor="@PresetColor.Blue">
+        @(latency.Value.TotalMilliseconds)ms
+    </Tag>
 }
 
 @code {

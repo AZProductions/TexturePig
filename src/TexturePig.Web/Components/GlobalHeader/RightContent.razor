@@ -2,32 +2,51 @@
 @inherits AntDomComponentBase
 @using AntDesign;
 @using AntDesign.ProLayout
+
+@*<div Class="center">
+    <Search Placeholder="input search text" style="       height: 100%; 
+width: 100%; 
+justify-content: center; 
+display: flex; 
+align-items: center; " EnterButton="true"/>
+</div>*@
+
 <Space Class="@ClassMapper.Class">
+    <SpaceItem>
+        <LoadingSpeed></LoadingSpeed>
+    </SpaceItem>
     <SpaceItem>
         <HeaderSearch Class="action search"
                       Placeholder="Site Search"
                       DefaultValue="example"/>
     </SpaceItem>
-    <SpaceItem>
-        <span class="avatar-item">
-        <Badge Count="12">
-            <AvatarDropdown Name="Example"   MenuItems="@AvatarMenuItems" Avatar="Test">
-            
-            </AvatarDropdown>
-        </Badge>
-        </span>
-        <style>
-    /* tile uploaded pictures */
-    .avatar-item {
-        margin-left: 24px;
-    }
+        @if (TexturePig.Web.Services.UserService.LoggedIn)
+        {
+            <SpaceItem>
+                <span class="avatar-item">
+                <Badge Count="12">
+                    <AvatarDropdown Name="Example"   MenuItems="@AvatarMenuItems" Avatar="Test"/>
+                </Badge>
+                </span>
+                <style>
+                /* tile uploaded pictures */
+                .avatar-item {
+                    margin-left: 24px;
+                }
 
-    [class*='-col-rtl'] .avatar-item {
-        margin-right: 24px;
-        margin-left: 0;
-    }
-    </style>
-    </SpaceItem>
+                [class*='-col-rtl'] .avatar-item {
+                    margin-right: 24px;
+                    margin-left: 0;
+                }
+            </style>
+            </SpaceItem>
+        }
+        else
+        {
+            <SpaceItem>
+                <Button Type="@ButtonType.Primary">Login</Button>
+            </SpaceItem>
+        }
     @code
     {
      public AvatarMenuItem[] AvatarMenuItems { get; set; } = new AvatarMenuItem[]
