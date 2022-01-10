@@ -2,11 +2,11 @@
 
 @if (latency is null)
 {
-      <Tag PresetColor="@PresetColor.Blue">Calculating...</Tag>
+      <Tag PresetColor="@PresetColor.Red">Calculating...</Tag>
 }
 else
 {
-    <Tag PresetColor="@PresetColor.Blue">
+    <Tag PresetColor="@PresetColor.Red">
         @(latency.Value.TotalMilliseconds)ms
     </Tag>
 }
