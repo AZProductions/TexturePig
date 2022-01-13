@@ -1,21 +1,18 @@
-﻿<div>
-    <Card Hoverable Style="width: 240px" Cover="coverTemplate">
-        <CardMeta Title="@Title" Description="@Image"/>
-    </Card>
-</div>
-
+﻿<Card Hoverable Cover="Cover">
+        <CardMeta Title="@Name" Description="@Description"/>
+        <Button Type="@ButtonType.Primary" style="margin-top: 10px;">Visit Pack</Button>
+</Card>
 
 @code
 {
     [Parameter]
-    public string Title { get; set; }
-    
-    [Parameter]
-    public string Description { get; set; }
+    public string Name { get; set; } = "Pack";
 
     [Parameter]
-    public static string Image { get; set; }
+    public string Description { get; set; } = "The official pack.";
 
     [Parameter]
-    public RenderFragment coverTemplate { get; set; } = @<img alt="pack image" src=@Image/>;
+    public RenderFragment Cover { get; set; } =
+    @<img alt="banner"  src="https://imgur.com/K6cRgla.png"/>
+    ;
 }

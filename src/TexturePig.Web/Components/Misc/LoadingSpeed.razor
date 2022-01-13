@@ -2,7 +2,7 @@
 
 @if (latency is null)
 {
-      <Tag PresetColor="@PresetColor.Red">Calculating...</Tag>
+    <Tag PresetColor="@PresetColor.Red">Calculating...</Tag>
 }
 else
 {
@@ -14,7 +14,6 @@ else
 @code {
     private DateTime startTime;
     private TimeSpan? latency;
-
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)

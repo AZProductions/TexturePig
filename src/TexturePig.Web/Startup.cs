@@ -35,10 +35,7 @@ namespace TexturePig.Web
                 BaseAddress = new Uri(sp.GetService<NavigationManager>().BaseUri)
             });
             services.Configure<ProSettings>(Configuration.GetSection("ProSettings"));
-/*            services.Configure<ForwardedHeadersOptions>(options =>
-            {
-                options.KnownProxies.Add(IPAddress.Parse("0.0.0.0"));
-            });*/
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
