@@ -2,16 +2,13 @@
 @inherits AntDomComponentBase
 @using AntDesign;
 @using AntDesign.ProLayout
-
-@*<div Class="center">
-    <Search Placeholder="input search text" style="       height: 100%; 
-width: 100%; 
-justify-content: center; 
-display: flex; 
-align-items: center; " EnterButton="true"/>
-</div>*@
+@using Tooltip = AntDesign.Tooltip;
+@inject NavigationManager NavigationManager
 
 <Space Class="@ClassMapper.Class">
+    <SpaceItem style="margin-top:14px"> 
+        <Search Placeholder="Search for..." style="width: 50rem;" AllowClear EnterButton="true"/>
+    </SpaceItem>
     <SpaceItem>
         <ProjectTag></ProjectTag>
     </SpaceItem>
@@ -19,19 +16,42 @@ align-items: center; " EnterButton="true"/>
         <LoadingSpeed></LoadingSpeed>
     </SpaceItem>
     <SpaceItem>
-        <HeaderSearch Class="action search"
-                      Placeholder="Site Search"
-                      DefaultValue="example"/>
+        @if (NavigationManager.ToBaseRelativePath(NavigationManager.Uri) == "support"){
+
+            <Button Shape="@ButtonShape.Round" @onclick="NavigateToSupportPage" Type="@ButtonType.Primary" Icon="@IconType.Outline.Question">Help</Button>
+        }
+        else{
+            <Button Shape="@ButtonShape.Round" @onclick="NavigateToSupportPage" Icon="@IconType.Outline.Question">Help</Button>
+        } 
+        @code{
+            private void NavigateToSupportPage() => NavigationManager.NavigateTo("/support");
+}
     </SpaceItem>
-        @if (TexturePig.Web.Services.UserService.LoggedIn)
-        {
-            <SpaceItem>
-                <span class="avatar-item">
+    <SpaceItem>
+        @if (NavigationManager.ToBaseRelativePath(NavigationManager.Uri) == "new"){
+
+            <Button Shape="@ButtonShape.Circle" @onclick="NavigateToNewPage" Type="@ButtonType.Primary" Icon="@IconType.Outline.Plus"/>
+        }
+        else{
+            <Button Shape="@ButtonShape.Circle" @onclick="NavigateToNewPage" Icon="@IconType.Outline.Plus"/>
+        }
+        @code{
+            private void NavigateToNewPage() 
+            { 
+                NavigationManager.NavigateTo("/new");
+            }
+        }
+    </SpaceItem>
+
+    @if (TexturePig.Web.Services.UserService.LoggedIn)
+    {
+        <SpaceItem>
+            <span class="avatar-item">
                 <Badge Count="12">
                     <AvatarDropdown Name="Example"   MenuItems="@AvatarMenuItems" Avatar="Test"/>
                 </Badge>
-                </span>
-                <style>
+            </span>
+            <style>
                 /* tile uploaded pictures */
                 .avatar-item {
                     margin-left: 24px;
@@ -42,14 +62,15 @@ align-items: center; " EnterButton="true"/>
                     margin-left: 0;
                 }
             </style>
-            </SpaceItem>
-        }
-        else
-        {
-            <SpaceItem>
-                <Button Type="@ButtonType.Primary">Login</Button>
-            </SpaceItem>
-        }
+        </SpaceItem>
+    }
+    else
+    {
+        <SpaceItem>
+            <Button Type="@ButtonType.Primary">Login</Button>
+        </SpaceItem>
+    }
+
     @code
     {
      public AvatarMenuItem[] AvatarMenuItems { get; set; } = new AvatarMenuItem[]

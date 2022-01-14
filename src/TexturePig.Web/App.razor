@@ -6,10 +6,10 @@
     </Found>
     <NotFound>
         <LayoutView Layout="@typeof(BasicLayout)">
-            <Result Status="404" Title="404" SubTitle="Sorry, the page you visited does not exist."><Extra><Button @onclick="NavigateToCounterComponent"
+            <Result Status="404" Title="404" SubTitle="Sorry, the page you visited does not exist."><Extra><Button @onclick="NavigateToSupportPage"
                 Type="primary">Back Home</Button></Extra></Result>
             @code { 
-                    private void NavigateToCounterComponent() 
+                    private void NavigateToSupportPage() 
                     { 
                         NavigationManager.NavigateTo("/");  
                     } 
