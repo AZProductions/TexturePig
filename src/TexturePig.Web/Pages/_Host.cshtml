@@ -25,6 +25,14 @@
     <app>
         @(await Html.RenderComponentAsync<App>(RenderMode.ServerPrerendered))
     </app>*@
+    <script type="text/javascript">
+        window.getDimensions = function() {
+            return {
+                    width: window.innerWidth,
+                    height: window.innerHeight
+                };
+        };
+    </script>
     <script src="_content/Microsoft.AspNetCore.Components.Web.Extensions/headManager.js"></script>
     <script src="_content/AntDesign/js/ant-design-blazor.js"></script>
     <script src="_content/AntDesign.Charts/ant-design-charts-blazor.js"></script>

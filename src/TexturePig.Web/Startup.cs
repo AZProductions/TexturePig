@@ -13,6 +13,7 @@ using Microsoft.Extensions.Hosting;
 using AntDesign.ProLayout;
 using Microsoft.AspNetCore.HttpOverrides;
 using System.Net;
+using TexturePig.Web.Services;
 
 namespace TexturePig.Web
 {
@@ -30,6 +31,7 @@ namespace TexturePig.Web
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddAntDesign();
+            services.AddScoped<BrowserWidthService>();
             services.AddScoped(sp => new HttpClient
             {
                 BaseAddress = new Uri(sp.GetService<NavigationManager>().BaseUri)

@@ -1,0 +1,46 @@
+﻿@using System.Text.RegularExpressions
+@using TexturePig.Web.Services
+@inject BrowserWidthService Service
+@inject NavigationManager NavigationManager
+
+<Search Placeholder="Search for..." @bind-Value="@InputValue" @onkeydown="@OnKeyDown" style=@StyleProp AllowClear EnterButton="true"/>
+
+@code {
+    private string InputValue { get; set; }
+
+    public void OnKeyDown(KeyboardEventArgs e)
+    {
+        if (e.Code == "Enter" || e.Code == "NumpadEnter")
+        {
+            NavigationManager.NavigateTo("/p/" + InputValue);
+        }
+        else if(Regex.IsMatch(e.Key.ToString(), "[a-z]", RegexOptions.IgnoreCase) && e.Key.Length == 1)
+        {
+            if(!e.CtrlKey)
+                InputValue = InputValue + e.Key;
+        }
+    }
+
+    protected override async void OnInitialized()
+    {
+        BrowserService.dimension = Service.GetDimensions();
+        var dimension = await Service.GetDimensions();
+        PointA = dimension.Width;
+        if (PointA <= 991)
+        {
+            PointX = PointA - PointB - PointC; 
+        }
+        else
+        {
+            PointX = PointA - PointB - PointD; 
+        }
+        StyleProp = $"width: {PointX}px;";
+        StateHasChanged();
+    }
+    public int PointA { get; set; }
+    public int PointB { get; set; } = 400;
+    public int PointC { get; set; } = 120;
+    public int PointD { get; set; } = 275;
+    public int PointX { get; set; }
+    public string StyleProp { get; set; }
+}

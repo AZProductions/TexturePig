@@ -1,1 +1,22 @@
-﻿<Tag>Test</Tag>
+﻿@using TexturePig.Web.Services
+@inject BrowserWidthService Service
+
+<h1>Window Dimensions</h1>
+
+<p>Window Height: @Height</p>
+<p>Window Width: @Width</p>
+
+<button @onclick="GetDimensions">Get Dimensions</button>
+
+@code {
+
+    public int Height { get; set; }
+    public int Width { get; set; }
+
+    async Task GetDimensions() {
+        var dimension = await Service.GetDimensions();
+        Height = dimension.Height;
+        Width = dimension.Width;
+    }
+
+}
