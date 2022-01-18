@@ -12,12 +12,11 @@
             <PackDisplay Cover="renderFragment"></PackDisplay>
         </Col>
     </Row>
-
 </div>
-
 
 <TexturePig.Web.Components.BannerView></TexturePig.Web.Components.BannerView>
 
+<TexturePig.Web.Components.NotificationPanel></TexturePig.Web.Components.NotificationPanel>
 
 @code
 {
@@ -25,4 +24,5 @@
     private static string urlstream2 = "https://imgur.com/riueGsw.png";
     private RenderFragment renderFragment = @<img alt="banner"  src="@urlstream">;
     private RenderFragment renderFragment2 = @<img alt="banner"  src="@urlstream2">;
+
 }
