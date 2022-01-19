@@ -19,6 +19,7 @@
     <PackageReference Include="AntDesign.Charts" Version="0.2.2" />
     <PackageReference Include="AntDesign.ProLayout" Version="0.1.10" />
 	<PackageReference Include="Microsoft.AspNetCore.Components.Web.Extensions" Version="5.0.0-preview9.20513.1" />
+	<PackageReference Include="Microsoft.JSInterop" Version="6.0.1" />
   </ItemGroup>
 
 </Project>

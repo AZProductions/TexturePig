@@ -3,7 +3,7 @@
 @inject BrowserWidthService Service
 @inject NavigationManager NavigationManager
 
-<Search Placeholder="Search for..." @bind-Value="@InputValue" @onkeydown="@OnKeyDown" style=@StyleProp AllowClear EnterButton="true"/>
+<Search Placeholder="Search for..." AutoFocus @bind-Value="@InputValue" @onkeydown="@OnKeyDown" style=@StyleProp AllowClear EnterButton="true"/>
 
 @code {
     private string InputValue { get; set; }
@@ -14,11 +14,11 @@
         {
             NavigationManager.NavigateTo("/p/" + InputValue);
         }
-        else if(Regex.IsMatch(e.Key.ToString(), "[a-z]", RegexOptions.IgnoreCase) && e.Key.Length == 1)
+        /*else if(Regex.IsMatch(e.Key.ToString(), "[a-z]", RegexOptions.IgnoreCase) && e.Key.Length == 1)
         {
             if(!e.CtrlKey)
                 InputValue = InputValue + e.Key;
-        }
+        }*/
     }
 
     protected override async void OnInitialized()
@@ -37,6 +37,7 @@
         StyleProp = $"width: {PointX}px;";
         StateHasChanged();
     }
+
     public int PointA { get; set; }
     public int PointB { get; set; } = 400;
     public int PointC { get; set; } = 120;

@@ -20,8 +20,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TexturePig.Web", "TexturePi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TexturePig.API", "TexturePig.API\TexturePig.API.csproj", "{FFA8A38E-E1EB-4B6F-B6AB-68BED7ED728C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.Matchbox", "Blazor.Matchbox\Blazor.Matchbox.csproj", "{86BA44C7-123D-49F2-B0A8-7CAEB9398F99}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -166,26 +164,6 @@ Global
 		{FFA8A38E-E1EB-4B6F-B6AB-68BED7ED728C}.Release|x64.Build.0 = Release|Any CPU
 		{FFA8A38E-E1EB-4B6F-B6AB-68BED7ED728C}.Release|x86.ActiveCfg = Release|Any CPU
 		{FFA8A38E-E1EB-4B6F-B6AB-68BED7ED728C}.Release|x86.Build.0 = Release|Any CPU
-		{86BA44C7-123D-49F2-B0A8-7CAEB9398F99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{86BA44C7-123D-49F2-B0A8-7CAEB9398F99}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{86BA44C7-123D-49F2-B0A8-7CAEB9398F99}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{86BA44C7-123D-49F2-B0A8-7CAEB9398F99}.Debug|ARM.Build.0 = Debug|Any CPU
-		{86BA44C7-123D-49F2-B0A8-7CAEB9398F99}.Debug|ARM64.ActiveCfg = Debug|Any CPU
-		{86BA44C7-123D-49F2-B0A8-7CAEB9398F99}.Debug|ARM64.Build.0 = Debug|Any CPU
-		{86BA44C7-123D-49F2-B0A8-7CAEB9398F99}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{86BA44C7-123D-49F2-B0A8-7CAEB9398F99}.Debug|x64.Build.0 = Debug|Any CPU
-		{86BA44C7-123D-49F2-B0A8-7CAEB9398F99}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{86BA44C7-123D-49F2-B0A8-7CAEB9398F99}.Debug|x86.Build.0 = Debug|Any CPU
-		{86BA44C7-123D-49F2-B0A8-7CAEB9398F99}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{86BA44C7-123D-49F2-B0A8-7CAEB9398F99}.Release|Any CPU.Build.0 = Release|Any CPU
-		{86BA44C7-123D-49F2-B0A8-7CAEB9398F99}.Release|ARM.ActiveCfg = Release|Any CPU
-		{86BA44C7-123D-49F2-B0A8-7CAEB9398F99}.Release|ARM.Build.0 = Release|Any CPU
-		{86BA44C7-123D-49F2-B0A8-7CAEB9398F99}.Release|ARM64.ActiveCfg = Release|Any CPU
-		{86BA44C7-123D-49F2-B0A8-7CAEB9398F99}.Release|ARM64.Build.0 = Release|Any CPU
-		{86BA44C7-123D-49F2-B0A8-7CAEB9398F99}.Release|x64.ActiveCfg = Release|Any CPU
-		{86BA44C7-123D-49F2-B0A8-7CAEB9398F99}.Release|x64.Build.0 = Release|Any CPU
-		{86BA44C7-123D-49F2-B0A8-7CAEB9398F99}.Release|x86.ActiveCfg = Release|Any CPU
-		{86BA44C7-123D-49F2-B0A8-7CAEB9398F99}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
