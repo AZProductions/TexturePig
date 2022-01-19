@@ -1,0 +1,9 @@
+﻿@inject NavigationManager uriHelper;
+<Button @onclick="Reload">Try Again</Button>
+
+@code {
+    private void Reload()
+    {
+        uriHelper.NavigateTo(uriHelper.Uri, forceLoad: true);
+    }
+}
