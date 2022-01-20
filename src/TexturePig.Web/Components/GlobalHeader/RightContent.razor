@@ -3,7 +3,8 @@
 @using AntDesign;
 @using AntDesign.ProLayout
 @using Tooltip = AntDesign.Tooltip;
-@inject NavigationManager NavigationManager
+@inject NavigationManager _navigationManager
+@inject MessageService _message
 
 <Space Class="@ClassMapper.Class">
     <SpaceItem style="margin-top:14px"> 
@@ -16,7 +17,7 @@
         <LoadingSpeed></LoadingSpeed>
     </SpaceItem>
     <SpaceItem>
-        @if (NavigationManager.ToBaseRelativePath(NavigationManager.Uri) == "support"){
+        @if (_navigationManager.ToBaseRelativePath(_navigationManager.Uri) == "support"){
 
             <Button Shape="@ButtonShape.Round" @onclick="NavigateToSupportPage" Type="@ButtonType.Primary" Icon="@IconType.Outline.Question">Help</Button>
         }
@@ -24,11 +25,14 @@
             <Button Shape="@ButtonShape.Round" @onclick="NavigateToSupportPage" Icon="@IconType.Outline.Question">Help</Button>
         } 
         @code{
-            private void NavigateToSupportPage() => NavigationManager.NavigateTo("/support");
+            private void NavigateToSupportPage() 
+            {
+                _navigationManager.NavigateTo("/support");
+            }
         }
     </SpaceItem>
     <SpaceItem>
-        @if (NavigationManager.ToBaseRelativePath(NavigationManager.Uri) == "new"){
+        @if (_navigationManager.ToBaseRelativePath(_navigationManager.Uri) == "new"){
 
             <Button Shape="@ButtonShape.Circle" @onclick="NavigateToNewPage" Type="@ButtonType.Primary" Icon="@IconType.Outline.Plus"/>
         }
@@ -38,7 +42,13 @@
         @code{
             private void NavigateToNewPage() 
             { 
-                NavigationManager.NavigateTo("/new");
+                if (TexturePig.Web.Services.UserService.LoggedIn)
+                    _navigationManager.NavigateTo("/new");
+                else
+                {
+                    _navigationManager.NavigateTo("/login");
+                    _message.Error("Login to create items.");
+                }
             }
         }
     </SpaceItem>

@@ -21,11 +21,9 @@
 </div>
 </Result>
 
+@inject NavigationManager uriHelper;
+
 @code {
     RenderFragment extra =
-        @<Template>
-            <Button Type="primary">Go Console</Button>
-            <Button>Buy Again</Button>
-        </Template>
-        ;
+    @<Template><Button Type="primary">Account</Button><ReloadPage></ReloadPage></Template>;
 }

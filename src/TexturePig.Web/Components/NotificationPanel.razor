@@ -1,0 +1,35 @@
+﻿@inject NotificationService _notice
+@inject NavigationManager NavigationManager
+
+<Button Type="@ButtonType.Primary">
+    custom button
+</Button>
+
+
+@code {
+    protected override async void OnAfterRender(bool firstRender)
+    {
+        if (firstRender)
+        {
+            string url = "/p/nectar";
+            await Task.Delay(1000);
+            RenderFragment btn =
+    @<Button Type="@ButtonType.Primary" OnClick="() => { NavigationManager.NavigateTo(url); }">Download</Button>
+    ;
+            RenderFragment customIcon =
+    @<Icon Type="star" Theme="outline" Style="color:#108ee9;"></Icon>
+    ;
+            RenderFragment closeIcon =
+    @<Icon Type="close" Theme="outline" Style="color:#108ee9;"></Icon>
+    ;
+            await _notice.Open(new NotificationConfig()
+                {
+                    Message = "Join the Hype!",
+                    Description = "Get the Nectar pack today! Designed for Bedwars in mind, a clean, dark themed minecraft texturepack.",
+                    Icon = customIcon,
+                    Btn = btn,
+                    CloseIcon = closeIcon
+                });
+        }
+    }
+}
