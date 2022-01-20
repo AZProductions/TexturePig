@@ -14,6 +14,7 @@ using AntDesign.ProLayout;
 using Microsoft.AspNetCore.HttpOverrides;
 using System.Net;
 using TexturePig.Web.Services;
+using LoginRadiusSDK.V2;
 
 namespace TexturePig.Web
 {
@@ -65,6 +66,18 @@ namespace TexturePig.Web
             });
 
             app.UseAuthentication();
+
+            /*LoginRadiusSdkGlobalConfig.ApiKey = "--key";
+            LoginRadiusSdkGlobalConfig.ApiSecret = "--secret";
+            LoginRadiusSdkGlobalConfig.AppName = "texturepig";
+            LoginRadiusSdkGlobalConfig.ApiRequestSigning = "false";
+            LoginRadiusSdkGlobalConfig.ConnectionTimeout = 30000; // Connection Timeout (milliseconds)
+            //LoginRadiusSdkGlobalConfig.ProxyAddress = "__HTTP_PROXY_ADDRESS__"; // Absolute Proxy URI
+            //LoginRadiusSdkGlobalConfig.ProxyCredentials = "__HTTP_PROXY_CREDENTIALS__"; // Proxy Credentials in the format 'USERNAME:PASSWORD'
+            LoginRadiusSdkGlobalConfig.RequestRetries = 3;
+            LoginRadiusSdkGlobalConfig.ApiRegion = "eu";
+            LoginRadiusSdkGlobalConfig.DomainName = "https://api.loginradius.com/";*/
+
 
             app.UseEndpoints(endpoints =>
             {
