@@ -15,7 +15,7 @@
             NavigationManager.NavigateTo("/p/" + InputValue);
         }
         /*else if(Regex.IsMatch(e.Key.ToString(), "[a-z]", RegexOptions.IgnoreCase) && e.Key.Length == 1)
-        {
+            {
             if(!e.CtrlKey)
                 InputValue = InputValue + e.Key;
         }*/
@@ -41,7 +41,7 @@
     public int PointA { get; set; }
     public int PointB { get; set; } = 400;
     public int PointC { get; set; } = 120;
-    public int PointD { get; set; } = 275;
+    public int PointD { get; set; } = 300;
     public int PointX { get; set; }
-    public string StyleProp { get; set; }
+    public string StyleProp { get; set; } = "width: 1245px;";
 }

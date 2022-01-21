@@ -77,7 +77,13 @@
     else
     {
         <SpaceItem>
-            <Button Type="@ButtonType.Primary">Login</Button>
+            <Button Type="@ButtonType.Primary" @onclick="NavigateToLoginPage">Login</Button> 
+            @code{
+            private void NavigateToLoginPage() 
+            { 
+                _navigationManager.NavigateTo($"https://texturepig.hub.loginradius.com/auth.aspx?action=register&return_url=https://texturepig.com");
+            }
+        }
         </SpaceItem>
     }
 
