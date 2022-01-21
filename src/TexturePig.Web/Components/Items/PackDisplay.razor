@@ -1,12 +1,26 @@
-﻿<Card Hoverable Cover="Cover">
-        <CardMeta Title="@Name" Description="@Description"/>
+﻿<Card Hoverable Cover="Cover" TitleTemplate="@TitleTemp()">
+        <CardMeta Description="@Description"></CardMeta>
         <Button Type="@ButtonType.Primary" style="margin-top: 10px;">Visit Pack</Button>
 </Card>
 
 @code
 {
+    private RenderFragment TitleTemp()
+    {
+        return 
+    @<div>@Name <Tag PresetColor="@PresetColor.Volcano">@Resolution</Tag>@if (Verified) {  <Icon Type="star" Theme="twotone" TwoToneColor="#55acee"/> }
+        </div>
+    ; 
+    }
+
+    [Parameter]
+    public bool Verified { get; set; } = false;
+
     [Parameter]
     public string Name { get; set; } = "Pack";
+
+    [Parameter]
+    public string Resolution { get; set; } = "16x";
 
     [Parameter]
     public string Description { get; set; } = "The official pack.";

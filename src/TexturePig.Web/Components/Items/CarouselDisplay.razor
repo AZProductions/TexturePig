@@ -1,0 +1,13 @@
+﻿<Carousel Autoplay="TimeSpan.FromSeconds(10)" Style="width:100%;">
+    <CarouselSlick>
+        <div>@GetURLtoFragment("https://i.imgur.com/aWGVZx5.png", "")</div>
+    </CarouselSlick>
+</Carousel>
+
+@code
+{
+    private RenderFragment GetURLtoFragment(string url, string alt)
+    {
+        return @<img alt="@alt" style="pointer-events:none;" src="@url">; 
+    }
+}

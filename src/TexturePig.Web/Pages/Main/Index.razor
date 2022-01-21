@@ -1,26 +1,9 @@
 ﻿@page "/"
 
-<div style="padding: 20px;">
-    <Row Gutter="16">
-        <Col Span="8">
-            <PackDisplay></PackDisplay>
-        </Col>
-        <Col Span="8">
-            <PackDisplay Cover="renderFragment2" Name="PigPvP" Description="The official PigPvP texturepack on texturepig."></PackDisplay>
-        </Col>
-        <Col Span="8">
-            <PackDisplay Cover="renderFragment"></PackDisplay>
-        </Col>
-    </Row>
-</div>
+<StatusDisplay></StatusDisplay>
 
-<TexturePig.Web.Components.NotificationPanel></TexturePig.Web.Components.NotificationPanel>
+@*<CarouselDisplay></CarouselDisplay>*@
 
-@code
-{
-    private static string urlstream = "https://imgur.com/8UlCNri.png";
-    private static string urlstream2 = "https://imgur.com/riueGsw.png";
-    private RenderFragment renderFragment = @<img alt="banner"  src="@urlstream">;
-    private RenderFragment renderFragment2 = @<img alt="banner"  src="@urlstream2">;
+<PackRowView></PackRowView>
 
-}
+<NotificationPanel></NotificationPanel>
