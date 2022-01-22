@@ -1,4 +1,4 @@
-﻿namespace TexturePig.Web.Models
+﻿namespace TexturePig.Driver.Models
 {
     public class PackItem
     {
