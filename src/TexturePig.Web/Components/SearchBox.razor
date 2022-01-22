@@ -6,8 +6,7 @@
 <Search Placeholder="Search for..." AutoFocus @bind-Value="@InputValue" @onkeydown="@OnKeyDown" style=@StyleProp AllowClear EnterButton="true"/>
 
 @code {
-    private string InputValue { get; set; }
-
+    private string? InputValue { get; set; }
     public void OnKeyDown(KeyboardEventArgs e)
     {
         if (e.Code == "Enter" || e.Code == "NumpadEnter")
@@ -28,12 +27,13 @@
         PointA = dimension.Width;
         if (PointA <= 991)
         {
-            PointX = PointA - PointB - PointC; 
+            PointX = PointA - PointB - PointC;
         }
         else
         {
-            PointX = PointA - PointB - PointD; 
+            PointX = PointA - PointB - PointD;
         }
+
         StyleProp = $"width: {PointX}px;";
         StateHasChanged();
     }

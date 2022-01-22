@@ -1,13 +1,34 @@
 ﻿@page "/pack/{value}"
 @page "/p/{value}"
+@page "/p/"
+@page "/pack/"
+@inject NavigationManager _navigationManager
 
 <PageTitle>@Value - TexturePig</PageTitle>
 
-
-
-<h1>@Value</h1>
+<div style=" height: 200px;
+  position: relative;
+  border: 3px solid green; ">
+  <div align="right">
+  </div>
+  <div align="left" style=" margin: auto;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);">
+      <Button Icon="download" Type="@ButtonType.Primary">Download</Button>
+      <Button Icon="plus" Type="@ButtonType.Dashed">Add to Collection</Button>
+  </div>
+</div>
+  
 
 @code {
     [Parameter]
     public string? Value { get; set; }
+
+    protected override async void OnInitialized()
+    {
+        if(string.IsNullOrEmpty(Value))
+            _navigationManager.NavigateTo("/");
+    }
 }
