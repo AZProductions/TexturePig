@@ -1,6 +1,8 @@
-﻿<Card Hoverable Cover="Cover" TitleTemplate="@TitleTemp()">
+﻿@inject NavigationManager _navigationManager
+
+<Card Hoverable Cover="Cover" TitleTemplate="@TitleTemp()">
         <CardMeta Description="@Description"></CardMeta>
-        <Button Type="@ButtonType.Primary" style="margin-top: 10px;">Visit Pack</Button>
+        <Button Type="@ButtonType.Primary" OnClick="@ClickRedirect" style="margin-top: 10px;">Visit Pack</Button>
 </Card>
 
 @code
@@ -8,13 +10,19 @@
     private RenderFragment TitleTemp()
     {
         return 
-    @<div>@Name <Tag PresetColor="@PresetColor.Volcano">@Resolution</Tag>@if (Verified) {  <Icon Type="star" Theme="otone" TwoToneColor="#55acee"/> }
-        </div>
-    ; 
+    @<div>@Name <Tag PresetColor="@PresetColor.Volcano">@Resolution</Tag><Tag Icon="rocket" Color="#55acee">@Version</Tag>@if (Verified) {  <Icon Type="star" Theme="otone" TwoToneColor="#55acee"/> }</div>; 
+    }
+
+    private void ClickRedirect()
+    {
+        _navigationManager.NavigateTo("/pack/" + Name);
     }
 
     [Parameter]
     public bool Verified { get; set; } = false;
+    
+    [Parameter]
+    public string Version { get; set; } = "1.8.9";
 
     [Parameter]
     public string Name { get; set; } = "Pack";

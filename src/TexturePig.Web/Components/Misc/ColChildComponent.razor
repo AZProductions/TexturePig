@@ -1,0 +1,9 @@
+﻿<Col Span="8">
+	@foreach (PackDisplay pack in display)
+		@pack
+</Col>
+
+@code {
+	[Parameter]
+	public PackDisplay[] display { get; set; }
+}

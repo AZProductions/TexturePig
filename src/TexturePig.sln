@@ -18,7 +18,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TexturePig.Generator", "Tex
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TexturePig.Web", "TexturePig.Web\TexturePig.Web.csproj", "{7CFFCF49-2D7A-4D41-B6E3-0BFB7F6768F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TexturePig.Driver", "TexturePig.Driver\TexturePig.Driver.csproj", "{EC1D0580-5575-4B24-9209-2277F09651F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TexturePig.Driver", "TexturePig.Driver\TexturePig.Driver.csproj", "{EC1D0580-5575-4B24-9209-2277F09651F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

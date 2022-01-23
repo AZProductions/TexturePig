@@ -24,9 +24,9 @@
 
     public class ResetPasswordModel
     {
-        public string password { get; set; }
+        public string? password { get; set; }
 
-        public string resettoken { get; set; }
+        public string? resettoken { get; set; }
     }
 
     public class ChangePasswordModel

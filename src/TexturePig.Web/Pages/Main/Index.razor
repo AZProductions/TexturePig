@@ -4,6 +4,11 @@
 
 @*<CarouselDisplay></CarouselDisplay>*@
 
-<PackRowView></PackRowView>
+<PackRowView packDisplays="@display"></PackRowView>
+@code
+{
+	private RenderFragment display = @<PackDisplay Name="test"></PackDisplay>;
+	//private RenderFragment[] display = @<PackDisplay Name="test"></PackDisplay>;
+}
 
 <NotificationPanel></NotificationPanel>
