@@ -1,14 +1,13 @@
 ﻿@page "/"
-
 <StatusDisplay></StatusDisplay>
 
 @*<CarouselDisplay></CarouselDisplay>*@
 
-<PackRowView packDisplays="@display"></PackRowView>
+<PackRowView packDisplays="@renderFragments"></PackRowView>
 @code
 {
-	private RenderFragment display = @<PackDisplay Name="test"></PackDisplay>;
-	//private RenderFragment[] display = @<PackDisplay Name="test"></PackDisplay>;
+	private static RenderFragment[] renderFragments { get; set; } = { renderFragments1};
+	private static RenderFragment renderFragments1 { get; set; } = 
+	@<PackDisplay></PackDisplay>;
 }
-
 <NotificationPanel></NotificationPanel>

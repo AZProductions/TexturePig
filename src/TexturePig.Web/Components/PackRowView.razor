@@ -1,45 +1,16 @@
-﻿@*<div style="padding: 20px;">
+﻿<div style="padding: 20px;">
     <Row Gutter="(16, 16)">
-        <Col Span="8">
-            <PackDisplay></PackDisplay>
-        </Col>
-        <Col Span="8">
-           
-        </Col>
-        <Col Span="8">
-            <PackDisplay></PackDisplay>
-        </Col>
-        <Col Span="8">
-<PackDisplay Cover="@GetURLtoFragment("https://imgur.com/riueGsw.png")" Name="PigPvP" Description="The official PigPvP texturepack on texturepig."></PackDisplay>
-        </Col>
-        <Col Span="8">
-            <PackDisplay></PackDisplay>
-        </Col>
-        <Col Span="8">
-<PackDisplay Cover="@GetURLtoFragment("https://imgur.com/riueGsw.png")" Name="PigPvP" Description="The official PigPvP texturepack on texturepig."></PackDisplay>
-        </Col>
-    </Row>
-</div>*@
-
-@*@typeparam PackDisplay*@
-
-<div style="padding: 20px;">
-    <Row Gutter="(16, 16)">
-         @packDisplays
+	    @foreach(RenderFragment fragment in packDisplays)
+        {
+            <ColChildComponent display="fragment"></ColChildComponent>	
+        }
     </Row>
 </div>
 
 @code
 {
     [Parameter]
-    public RenderFragment packDisplays { get; set; }
-
-    public static int FlexInGrid(int value) => value / 4;
-
-    public static bool IsOdd(int value)
-    {
-        return value % 2 != 0;
-    }
+    public RenderFragment[] packDisplays { get; set; } 
 
     private RenderFragment GetURLtoFragment(string url, string alt="cover")
     {
